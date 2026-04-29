@@ -1,0 +1,19 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#050608"/>
+  <rect x="72" y="72" width="1056" height="756" rx="36" fill="url(#paint0_linear)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="120" y="148" fill="#57D8FF" font-family="Space Grotesk, sans-serif" font-size="18" letter-spacing="4">PHYSICAL ARTEFACT PLACEHOLDER</text>
+  <text x="120" y="214" fill="#F5F7FB" font-family="Space Grotesk, sans-serif" font-size="52" font-weight="700">Object, model, or installation</text>
+  <text x="120" y="260" fill="#C4CFDB" font-family="Space Grotesk, sans-serif" font-size="22">Replace this with a photo, render, scan, or embedded 3D documentation.</text>
+  <path d="M602 310L812 424V650L602 764L392 650V424L602 310Z" fill="#0E141B" stroke="rgba(255,255,255,0.16)" stroke-width="3"/>
+  <path d="M602 310L812 424L602 540L392 424L602 310Z" fill="#57D8FF" fill-opacity="0.12" stroke="#57D8FF" stroke-width="3"/>
+  <path d="M602 540V764" stroke="#57D8FF" stroke-width="3"/>
+  <path d="M812 424V650" stroke="#7C8CFF" stroke-width="3"/>
+  <path d="M392 424V650" stroke="#F8BC77" stroke-width="3"/>
+  <text x="486" y="614" fill="#F5F7FB" font-family="Space Grotesk, sans-serif" font-size="26">3D object placeholder</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="72" y1="72" x2="1128" y2="828" gradientUnits="userSpaceOnUse">
+      <stop stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="1" stop-color="rgba(255,255,255,0.03)"/>
+    </linearGradient>
+  </defs>
+</svg>
