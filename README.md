@@ -8,7 +8,7 @@ Static PSA website scaffold for a gender pay gap campaign. The site is designed 
 - `public/index.html`: main campaign site
 - `public/styles.css`: visual system and responsive layout
 - `public/script.js`: audience-pathway switching
-- `public/assets/`: placeholder visuals for the assessed artefacts
+- `public/assets/`: campaign visuals and remaining placeholder artefacts
 - `public/_headers`: Cloudflare Pages security headers
 - `wrangler.toml`: Cloudflare Pages configuration
 - `scripts/cloudflare_pages_deploy.rb`: direct-upload deployment helper
@@ -53,8 +53,7 @@ Optional environment variables:
 ## Content replacement checklist
 
 - Replace the podcast placeholder with the final audio piece.
-- Replace the infographic placeholder and insert three sourced data points.
-- Replace the campaign image placeholder.
 - Replace the physical artefact placeholder with final documentation.
+- Confirm the infographic figures and campaign image are the final team-approved versions.
 - Review the current reference list and swap in any team-approved source changes.
 - Review all copy for tone, geography, and audience-specific accuracy.
