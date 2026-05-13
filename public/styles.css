@@ -156,6 +156,21 @@ select {
   align-items: start;
 }
 
+.home-hero {
+  grid-template-columns: minmax(0, 0.85fr) minmax(20rem, 1.15fr);
+  align-items: end;
+}
+
+.home-hero-art img {
+  width: 100%;
+  min-height: 18rem;
+  object-fit: cover;
+}
+
+.home-proof-grid {
+  align-items: stretch;
+}
+
 .eyebrow,
 .panel-label,
 .card-index {
