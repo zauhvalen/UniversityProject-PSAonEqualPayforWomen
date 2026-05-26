@@ -164,7 +164,9 @@ select {
 .home-hero-art img {
   width: 100%;
   min-height: 18rem;
-  object-fit: cover;
+  max-height: 32rem;
+  object-fit: contain;
+  object-position: center;
 }
 
 .home-proof-grid {
@@ -711,7 +713,7 @@ li {
 
   .hero-image-panel img {
     min-height: 0;
-    aspect-ratio: 1265 / 492;
+    aspect-ratio: auto;
     object-fit: contain;
   }
 
