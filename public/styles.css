@@ -157,29 +157,17 @@ select {
 }
 
 .home-hero {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 0.6fr);
+  align-items: center;
   gap: 2rem;
-  text-align: center;
-}
-
-.home-hero .hero-copy {
-  max-width: 42rem;
-  margin: 0 auto;
-}
-
-.home-hero .button-row {
-  justify-content: center;
-}
-
-.home-hero-art {
-  max-width: 24rem;
-  margin: 0 auto;
 }
 
 .home-hero-art img {
   width: 100%;
   height: auto;
+  max-height: 36rem;
   object-fit: contain;
+  object-position: center;
 }
 
 .home-proof-grid {
