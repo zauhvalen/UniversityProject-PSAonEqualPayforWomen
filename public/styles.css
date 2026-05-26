@@ -1,19 +1,19 @@
 :root {
   color-scheme: dark;
-  --page-bg: #050608;
-  --page-surface: #0d1116;
-  --page-surface-soft: rgba(255, 255, 255, 0.035);
-  --page-border: rgba(255, 255, 255, 0.12);
-  --page-text: #f4f7fb;
-  --page-text-soft: #c1ccd8;
-  --page-text-muted: #8fa0b7;
-  --accent: #57d8ff;
-  --accent-hot: #f205b9;
-  --accent-red: #ff3045;
-  --accent-blue: #1b6dff;
-  --accent-yellow: #f8c926;
-  --accent-orange: #ff7a1a;
-  --shadow: 0 14px 32px rgba(0, 0, 0, 0.3), 0 0 32px rgba(242, 5, 185, 0.08);
+  --page-bg: #0a0a0f;
+  --page-surface: #12121a;
+  --page-surface-soft: rgba(255, 255, 255, 0.04);
+  --page-border: rgba(255, 255, 255, 0.15);
+  --page-text: #f0f0f5;
+  --page-text-soft: #b8b8c5;
+  --page-text-muted: #888895;
+  --accent: #ff6b35;
+  --accent-hot: #e91e63;
+  --accent-purple: #9c27b0;
+  --accent-pink: #f48fb1;
+  --accent-orange: #ff9800;
+  --accent-yellow: #ffc107;
+  --shadow: 0 14px 32px rgba(0, 0, 0, 0.4), 0 0 32px rgba(233, 30, 99, 0.15);
   --radius-lg: 1.25rem;
   --radius-md: 0.9rem;
   --content-width: min(68rem, calc(100vw - 2rem));
@@ -34,8 +34,9 @@ body {
   font-size: 1rem;
   color: var(--page-text);
   background:
-    radial-gradient(circle at top left, rgba(87, 216, 255, 0.11), transparent 20rem),
-    linear-gradient(180deg, #030405 0%, #050608 100%);
+    radial-gradient(circle at top right, rgba(233, 30, 99, 0.15), transparent 25rem),
+    radial-gradient(circle at bottom left, rgba(255, 107, 53, 0.12), transparent 20rem),
+    linear-gradient(180deg, #0a0a0f 0%, #050508 100%);
 }
 
 body::before {
@@ -178,7 +179,7 @@ select {
 .panel-label,
 .card-index {
   margin: 0 0 0.7rem;
-  color: var(--accent);
+  color: var(--accent-hot);
   font-size: 0.76rem;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -240,8 +241,8 @@ li {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, rgba(124, 140, 255, 0.92), rgba(87, 216, 255, 0.88));
-  color: #041018;
+  background: linear-gradient(135deg, rgba(233, 30, 99, 0.92), rgba(255, 107, 53, 0.88));
+  color: #fff;
   font-weight: 700;
 }
 
@@ -287,7 +288,7 @@ li {
 .text-link {
   color: var(--accent);
   text-decoration: underline;
-  text-decoration-color: rgba(87, 216, 255, 0.42);
+  text-decoration-color: rgba(255, 107, 53, 0.42);
   text-underline-offset: 0.18em;
   overflow-wrap: anywhere;
 }
@@ -364,7 +365,7 @@ li {
   background:
     conic-gradient(
       from 270deg at 50% 100%,
-      var(--accent-blue) 0deg 42deg,
+      var(--accent-purple) 0deg 42deg,
       var(--accent-hot) 42deg 180deg,
       transparent 180deg
     );
@@ -385,11 +386,11 @@ li {
   right: 8%;
   bottom: 0.04em;
   z-index: 1;
-  color: var(--accent-red);
+  color: var(--accent-hot);
   font-size: clamp(2.6rem, 7vw, 4.8rem);
   font-weight: 700;
   line-height: 0.9;
-  text-shadow: 0 0 18px rgba(255, 48, 69, 0.28);
+  text-shadow: 0 0 18px rgba(233, 30, 99, 0.28);
 }
 
 .split-bars {
@@ -416,7 +417,7 @@ li {
 }
 
 .split-copy span {
-  color: var(--accent-hot);
+  color: var(--accent-orange);
   font-weight: 700;
 }
 
@@ -438,12 +439,12 @@ li {
 }
 
 .bar-fill {
-  background: linear-gradient(135deg, var(--accent-hot), #ff4fd3);
+  background: linear-gradient(135deg, var(--accent-hot), var(--accent-pink));
 }
 
 .bar-rest {
   flex: 1;
-  background: linear-gradient(135deg, var(--accent-blue), #229dff);
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-orange));
 }
 
 .share-41 {
@@ -503,7 +504,7 @@ li {
 
 .state-table thead th {
   color: #fff;
-  background: linear-gradient(135deg, rgba(242, 5, 185, 0.96), rgba(255, 48, 69, 0.78));
+  background: linear-gradient(135deg, rgba(233, 30, 99, 0.96), rgba(255, 107, 53, 0.78));
 }
 
 .state-table tbody th {
@@ -515,7 +516,7 @@ li {
 }
 
 .state-table .row-accent td:nth-child(2) {
-  color: var(--accent-red);
+  color: var(--accent-hot);
   font-weight: 700;
 }
 
@@ -550,27 +551,27 @@ li {
 }
 
 .trend-yellow {
-  stroke: var(--accent-yellow);
-}
-
-.trend-blue {
-  stroke: var(--accent-blue);
-}
-
-.trend-orange {
   stroke: var(--accent-orange);
 }
 
+.trend-blue {
+  stroke: var(--accent-purple);
+}
+
+.trend-orange {
+  stroke: var(--accent-hot);
+}
+
 .legend-yellow {
-  fill: var(--accent-yellow);
+  fill: var(--accent-orange);
 }
 
 .legend-blue {
-  fill: var(--accent-blue);
+  fill: var(--accent-purple);
 }
 
 .legend-orange {
-  fill: var(--accent-orange);
+  fill: var(--accent-hot);
 }
 
 .asset-grid {
