@@ -24,4 +24,22 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 const fadeElements = document.querySelectorAll('.fade-up');
-fadeElements.forEach((el) => observer.observe(el));
+
+// Check elements already in viewport on page load
+const checkInitialVisibility = () => {
+  fadeElements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+    } else {
+      observer.observe(el);
+    }
+  });
+};
+
+// Run on load and after a small delay to ensure DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', checkInitialVisibility);
+} else {
+  checkInitialVisibility();
+}
