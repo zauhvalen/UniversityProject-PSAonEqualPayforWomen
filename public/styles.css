@@ -36,9 +36,10 @@ body {
   font-size: 1rem;
   color: var(--page-text);
   background:
-    radial-gradient(circle at top right, rgba(233, 30, 99, 0.15), transparent 25rem),
-    radial-gradient(circle at bottom left, rgba(33, 150, 243, 0.12), transparent 20rem),
-    radial-gradient(circle at top left, rgba(255, 107, 53, 0.1), transparent 18rem),
+    radial-gradient(circle at top right, rgba(233, 30, 99, 0.12), transparent 25rem),
+    radial-gradient(circle at bottom left, rgba(33, 150, 243, 0.18), transparent 22rem),
+    radial-gradient(circle at top left, rgba(0, 188, 212, 0.15), transparent 20rem),
+    radial-gradient(circle at center, rgba(33, 150, 243, 0.08), transparent 30rem),
     linear-gradient(180deg, #0a0a0f 0%, #050508 100%);
 }
 
@@ -190,7 +191,7 @@ select {
 .panel-label,
 .card-index {
   margin: 0 0 0.7rem;
-  color: var(--accent-hot);
+  color: var(--accent-blue);
   font-size: 0.76rem;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -252,7 +253,7 @@ li {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, rgba(233, 30, 99, 0.92), rgba(255, 107, 53, 0.88));
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.92), rgba(233, 30, 99, 0.88));
   color: #fff;
   font-weight: 700;
 }
@@ -297,9 +298,9 @@ li {
 .source-note a,
 .references-list a,
 .text-link {
-  color: var(--accent);
+  color: var(--accent-blue);
   text-decoration: underline;
-  text-decoration-color: rgba(255, 107, 53, 0.42);
+  text-decoration-color: rgba(33, 150, 243, 0.42);
   text-underline-offset: 0.18em;
   overflow-wrap: anywhere;
 }
@@ -377,8 +378,8 @@ li {
   background:
     conic-gradient(
       from 270deg at 50% 100%,
-      var(--accent-purple) 0deg 42deg,
-      var(--accent-hot) 42deg 180deg,
+      var(--accent-cyan) 0deg 42deg,
+      var(--accent-blue) 42deg 180deg,
       transparent 180deg
     );
 }
@@ -398,11 +399,11 @@ li {
   right: 8%;
   bottom: 0.04em;
   z-index: 1;
-  color: var(--accent-hot);
+  color: var(--accent-blue);
   font-size: clamp(2.6rem, 7vw, 4.8rem);
   font-weight: 700;
   line-height: 0.9;
-  text-shadow: 0 0 18px rgba(233, 30, 99, 0.28);
+  text-shadow: 0 0 18px rgba(33, 150, 243, 0.28);
 }
 
 .split-bars {
@@ -429,7 +430,7 @@ li {
 }
 
 .split-copy span {
-  color: var(--accent-orange);
+  color: var(--accent-cyan);
   font-weight: 700;
 }
 
@@ -451,12 +452,12 @@ li {
 }
 
 .bar-fill {
-  background: linear-gradient(135deg, var(--accent-hot), var(--accent-pink));
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
 }
 
 .bar-rest {
   flex: 1;
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-orange));
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
 }
 
 .share-41 {
@@ -516,7 +517,7 @@ li {
 
 .state-table thead th {
   color: #fff;
-  background: linear-gradient(135deg, rgba(233, 30, 99, 0.96), rgba(255, 107, 53, 0.78));
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.96), rgba(0, 188, 212, 0.78));
 }
 
 .state-table tbody th {
@@ -528,7 +529,7 @@ li {
 }
 
 .state-table .row-accent td:nth-child(2) {
-  color: var(--accent-hot);
+  color: var(--accent-blue);
   font-weight: 700;
 }
 
@@ -563,27 +564,27 @@ li {
 }
 
 .trend-yellow {
-  stroke: var(--accent-orange);
+  stroke: var(--accent-cyan);
 }
 
 .trend-blue {
-  stroke: var(--accent-purple);
+  stroke: var(--accent-blue);
 }
 
 .trend-orange {
-  stroke: var(--accent-hot);
+  stroke: var(--accent-purple);
 }
 
 .legend-yellow {
-  fill: var(--accent-orange);
+  fill: var(--accent-cyan);
 }
 
 .legend-blue {
-  fill: var(--accent-purple);
+  fill: var(--accent-blue);
 }
 
 .legend-orange {
-  fill: var(--accent-hot);
+  fill: var(--accent-purple);
 }
 
 .asset-grid {
