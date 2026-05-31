@@ -188,7 +188,39 @@ select {
   background: #000;
 }
 
+.emotion-animation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.action-animation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
 .weight-svg {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.emotion-svg {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.action-svg {
   width: 100%;
   height: 100%;
   max-width: 300px;
@@ -231,6 +263,154 @@ select {
   }
   50% {
     transform: translateY(20px);
+  }
+}
+
+.emotion-circle {
+  transform-origin: center;
+  animation: expandRipple 2s ease-out forwards;
+  opacity: 0;
+}
+
+.circle-1 { animation-delay: 0s; }
+.circle-2 { animation-delay: 0.4s; }
+.circle-3 { animation-delay: 0.8s; }
+
+.emotion-eye {
+  transform-origin: center;
+  animation: eyeAppear 1s ease-out forwards;
+  opacity: 0;
+}
+
+.eye-1 { animation-delay: 1.2s; }
+.eye-2 { animation-delay: 1.3s; }
+
+.emotion-smile {
+  transform-origin: center;
+  animation: smileAppear 1s ease-out forwards;
+  opacity: 0;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.emotion-smile { animation-delay: 1.4s; }
+
+@keyframes expandRipple {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes eyeAppear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+@keyframes smileAppear {
+  0% {
+    stroke-dashoffset: 100;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.9;
+  }
+}
+
+.emotion-animation:hover .emotion-circle {
+  animation: pulseRipple 1s ease-in-out infinite;
+}
+
+@keyframes pulseRipple {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.action-star {
+  transform-origin: center;
+  animation: starRise 2s ease-out forwards;
+  opacity: 0;
+}
+
+.star-1 { animation-delay: 0s; }
+.star-2 { animation-delay: 0.4s; }
+.star-3 { animation-delay: 0.8s; }
+
+.action-center {
+  transform-origin: center;
+  animation: centerAppear 1s ease-out forwards;
+  opacity: 0;
+}
+
+.center-1 { animation-delay: 1.2s; }
+
+.action-ring {
+  transform-origin: center;
+  animation: ringExpand 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.ring-1 { animation-delay: 1.4s; }
+.ring-2 { animation-delay: 1.6s; }
+
+@keyframes starRise {
+  0% {
+    transform: translateY(50px) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes centerAppear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+@keyframes ringExpand {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.action-animation:hover .action-star {
+  animation: starSpin 2s ease-in-out infinite;
+}
+
+@keyframes starSpin {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
   }
 }
 
