@@ -164,7 +164,7 @@ select {
   overflow: hidden;
   border: 1px solid var(--page-border);
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.035);
+  background: #000;
   box-shadow: var(--shadow);
 }
 
@@ -172,6 +172,7 @@ select {
   width: 100%;
   min-height: 20rem;
   object-fit: cover;
+  background: #000;
 }
 
 .media-panel img {
