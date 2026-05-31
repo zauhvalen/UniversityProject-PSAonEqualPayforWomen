@@ -170,8 +170,12 @@ select {
 
 .hero-image-panel img {
   width: 100%;
-  min-height: 16rem;
+  min-height: 20rem;
   object-fit: cover;
+}
+
+.media-panel img {
+  background: #000;
 }
 
 .page-hero {
