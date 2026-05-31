@@ -368,6 +368,8 @@ li {
   margin-top: auto;
 }
 
+
+
 .gauge-visual {
   position: relative;
   width: min(100%, 19rem);
@@ -375,14 +377,24 @@ li {
   margin: 0.2rem 0 1.2rem;
   overflow: hidden;
   border-radius: 20rem 20rem 0 0;
+
   background:
     conic-gradient(
       from 270deg at 50% 100%,
-      var(--accent-cyan) 0deg 42deg,
+
+      /* cyan starts at the bottom */
+      #22d3ee 0deg,
+      #38bdf8 0deg,
+      var(--accent-purple) 25deg,
+      var(--accent-purple) 42deg,
+
+      /* blue section stays where it is */
       var(--accent-blue) 42deg 180deg,
+
       transparent 180deg
     );
 }
+
 
 .gauge-visual::after {
   content: "";
@@ -396,11 +408,13 @@ li {
 
 .gauge-value {
   position: absolute;
-  right: 8%;
+  
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 0.04em;
   z-index: 1;
   color: var(--accent-blue);
-  font-size: clamp(2.6rem, 7vw, 4.8rem);
+  font-size: clamp(2.6rem, 4.3rem, 4.8rem);
   font-weight: 700;
   line-height: 0.9;
   text-shadow: 0 0 18px rgba(33, 150, 243, 0.28);
@@ -461,11 +475,11 @@ li {
 }
 
 .share-41 {
-  flex-basis: 41%;
+  flex-basis: 59%;
 }
 
 .share-73 {
-  flex-basis: 73%;
+  flex-basis: 27%;
 }
 
 .evidence-grid {
