@@ -359,15 +359,6 @@ select {
 
 .center-1 { animation-delay: 1.2s; }
 
-.action-ring {
-  transform-origin: center;
-  animation: ringExpand 1.5s ease-out forwards;
-  opacity: 0;
-}
-
-.ring-1 { animation-delay: 1.4s; }
-.ring-2 { animation-delay: 1.6s; }
-
 @keyframes starRise {
   0% {
     transform: translateY(50px) scale(0);
