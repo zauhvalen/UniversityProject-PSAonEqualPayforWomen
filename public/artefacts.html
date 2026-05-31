@@ -16,6 +16,54 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+    <style>
+      .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+      }
+      .lightbox.active {
+        display: flex;
+      }
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: var(--radius-md);
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: white;
+        font-size: 2rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s ease;
+      }
+      .lightbox-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .clickable-image {
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+      }
+      .clickable-image:hover {
+        opacity: 0.8;
+      }
+    </style>
   </head>
   <body data-page="artefacts">
     <div class="site-shell">
@@ -53,17 +101,17 @@
           <div>
             <p class="panel-label">Audio piece</p>
             <h3>An interview with Dr. Michaela Guthridge, Ph.D. on the neurological roots of the gender pay gap</h3>
-            <p>Dr. Michaela Guthridge, Ph.D. is an International Women & Girls's Rights Advocate, Empathy Expert, Strategic Thinker, and Social Innovator with 17 years' experience in global social justice research and advocacy. As Senior Policy & Research Officer at SNAICC - National Voice for our Children and former Research Officer at the National Centre for Action on Child Sexual Abuse, she explains how unconscious biases in the brain snowball into societal devaluation of women's work—and how we can retrain our minds to close the gap.</p>
+            <p>Dr. Michaela Guthridge, Ph.D. is an International Women & Girls's Rights Advocate, Empathy Expert, Strategic Thinker, and Social Innovator with 17 years' experience in global social justice research and advocacy. As Senior Policy & Research Officer at SNAICC - National Voice for our Children and former Research Officer at the National Centre for Action on Child Sexual Abuse, she explains how unconscious biases in the brain snowball into societal devaluation of women's work -and how we can retrain our minds to close the gap.</p>
             <details class="podcast-summary">
               <summary>View interview summary</summary>
               <div class="summary-content">
                 <h4>Key Outcomes</h4>
                 <p>Dr. Michaela Guthridge explained the gender wage gap as rooted in neurological unconscious biases that snowball into societal devaluation of women's work, rather than starting at the macro societal level. She emphasized that addressing the gap requires retraining individual brains to form positive associations with women and work, not just policy changes.</p>
                 <h4>Core Insights</h4>
-                <p><strong>Root Cause: Unconscious Bias</strong> — The wage gap originates in the brain's discriminatory processes that form unconscious biases about women's value, which evolve into stereotypes and sexism. These biases lead society to view women's work as "natural" and therefore economically undervalued.</p>
-                <p><strong>Economic Devaluation of Care Work</strong> — Women's care and emotional labor face economic undervaluing facilitated by unconscious biases that consider such work natural rather than skilled. The question of why only women have "moral obligations" for care work is itself problematic—fathers equally have moral implications for caring responsibilities.</p>
-                <p><strong>Effective Intervention: Making Invisible Labor Visible</strong> — A Nepal research project successfully changed community attitudes by having women document all unpaid care responsibilities on top of paid work. When presented to men in the community, this documentation created an "eye-opener" moment that led to new understanding of respect and equality.</p>
-                <p><strong>Path Forward: Brain Retraining Strategy</strong> — Solution requires retraining the brain to create positive associations when seeing women and work, rather than negative ones. Focus on enabling girls to imagine education, employment, and contributions beyond the lowest economic rungs.</p>
+                <p><strong>Root Cause: Unconscious Bias</strong>  - The wage gap originates in the brain's discriminatory processes that form unconscious biases about women's value, which evolve into stereotypes and sexism. These biases lead society to view women's work as "natural" and therefore economically undervalued.</p>
+                <p><strong>Economic Devaluation of Care Work</strong>  - Women's care and emotional labor face economic undervaluing facilitated by unconscious biases that consider such work natural rather than skilled. The question of why only women have "moral obligations" for care work is itself problematic -fathers equally have moral implications for caring responsibilities.</p>
+                <p><strong>Effective Intervention: Making Invisible Labor Visible</strong>  - A Nepal research project successfully changed community attitudes by having women document all unpaid care responsibilities on top of paid work. When presented to men in the community, this documentation created an "eye-opener" moment that led to new understanding of respect and equality.</p>
+                <p><strong>Path Forward: Brain Retraining Strategy</strong>  - Solution requires retraining the brain to create positive associations when seeing women and work, rather than negative ones. Focus on enabling girls to imagine education, employment, and contributions beyond the lowest economic rungs.</p>
               </div>
             </details>
           </div>
@@ -71,10 +119,10 @@
 
         <article class="panel media-panel">
           <div class="artifact-mosaic">
-            <img src="assets/infographic-1.webp" alt="Gauge graphic showing a 22.8 percent manager pay gap" />
-            <img src="assets/infographic-2.webp" alt="Bar graphic comparing full-time and part-time employment shares" />
-            <img src="assets/infographic-4.webp" alt="Table graphic of gender pay gap by Australian state and territory" />
-            <img class="dark-chart-image" src="assets/infographic-3.webp" alt="Line chart showing Australia's total remuneration gender pay gap over time" />
+            <img src="assets/infographic-1.webp" alt="Gauge graphic showing a 22.8 percent manager pay gap" class="clickable-image" />
+            <img src="assets/infographic-2.webp" alt="Bar graphic comparing full-time and part-time employment shares" class="clickable-image" />
+            <img src="assets/infographic-4.webp" alt="Table graphic of gender pay gap by Australian state and territory" class="clickable-image" />
+            <img class="dark-chart-image clickable-image" src="assets/infographic-3.webp" alt="Line chart showing Australia's total remuneration gender pay gap over time" />
           </div>
           <div>
             <p class="panel-label">Infographic</p>
@@ -84,7 +132,7 @@
         </article>
 
         <article class="panel media-panel">
-          <img src="assets/peace-and-justice-header.webp" alt="Strong Institutions campaign header illustration" />
+          <img src="assets/peace-and-justice-header.webp" alt="Strong Institutions campaign header illustration" class="clickable-image" />
           <div>
             <p class="panel-label">Campaign image</p>
             <h3>The visual face of the Strong Institutions campaign</h3>
@@ -94,8 +142,8 @@
 
         <article class="panel media-panel">
           <div class="artifact-mosaic">
-            <img src="assets/gap-poster.webp" alt="The Gap Has Weight poster" />
-            <img src="assets/pay-gap-ai-image.webp" alt="Pay Gap AI Image poster" />
+            <img src="assets/gap-poster.webp" alt="The Gap Has Weight poster" class="clickable-image" />
+            <img src="assets/pay-gap-ai-image.webp" alt="Pay Gap AI Image poster" class="clickable-image" />
           </div>
           <div>
             <p class="panel-label">Posters</p>
@@ -105,7 +153,7 @@
         </article>
 
         <article class="panel media-panel">
-          <img src="assets/physical-object.webp" alt="Physical artefact" />
+          <img src="assets/physical-object.webp" alt="Physical artefact" class="clickable-image" />
           <div>
             <p class="panel-label">Physical artefact</p>
             <h3>The object that gives the argument tangible weight</h3>
@@ -151,5 +199,41 @@
       <p>Feel it. Learn it. Act on it.</p>
     </footer>
     </div>
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <img id="lightbox-image" src="" alt="">
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const clickableImages = document.querySelectorAll('.clickable-image');
+
+        clickableImages.forEach(img => {
+          img.addEventListener('click', function() {
+            lightboxImage.src = this.src;
+            lightboxImage.alt = this.alt;
+            lightbox.classList.add('active');
+          });
+        });
+
+        lightboxClose.addEventListener('click', function() {
+          lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
